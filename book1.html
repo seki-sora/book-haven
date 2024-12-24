@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f3e7e9;
+            --text-color: #333;
+            --header-bg: #ffffff;
+            --link-color: #555;
+            --link-hover: #0077cc;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --header-bg: #1e1e1e;
+            --link-color: #bbbbbb;
+            --link-hover: #4a90e2;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--header-bg);
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            display: inline;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: var(--link-color);
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--link-hover);
+        }
+
+        .theme-switch {
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .book-details {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .book-header {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .book-header img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-header .info {
+            flex: 1;
+        }
+
+        .book-header .info h2 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+        }
+
+        .book-header .info p {
+            margin: 5px 0;
+        }
+
+        .book-content {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--header-bg);
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./home.png"></a>
+        <nav>
+            <a href="#details">Details</a>
+            <a href="#content">Content</a>
+            <span class="theme-switch" onclick="toggleTheme()">Switch Theme</span>
+        </nav>
+    </header>
+
+    <section class="book-details">
+        <div class="book-header">
+            <img src="./When Rain Meets Tears.png" alt="Book Cover">
+            <div class="info">
+                <h2>When Rain Meets Tears</h2>
+                <br>
+                <p><strong>Author:</strong> Lawrence Bradford </p>
+                <br>
+                <p><strong>Genre:</strong> Fiction</p>
+                <br>
+                <p><strong>Description:</strong> I am a young man fresh out of college, trying to find my footing in the real world as a programmer. After struggling to land a job, I finally secure a position at a not-so-famous company. On my first day, I was assigned to a project with a beautiful senior. An unexpected event has led me to her place. One incidence after another, we became closer and our relationship became more complicated than ever.</p>
+            </div>
+        </div>
+
+        <div id="content" class="book-content">
+            <h3>Prologue</h3>
+            <p>
+                It was a rainy sky of June, but there was no charm or romance to the
+                downpour. Instead, the rain fell relentlessly, as if the heavens were shedding
+                tears in sync with my own sorrow. The world had become a grey canvas, devoid
+                of the joy and vibrancy that should have accompanied the arrival of June.
+            </p>
+            <p>
+                The raindrops fell onto my face as I was lying on the ground. I couldn't move
+                an inch towards her. I couldn't help but watch her covered with blood, eyes wide
+                opened, shattered glass around her, reflecting her face with tears and blood.
+            </p>
+            <p>
+                Time seemed to stand still as I lay there, the sound of the rain mingling with
+                the thumping of my heart. Her face haunted me, etched in agony and despair,
+                and my breath caught in my throat. “No, no, this can't be happening,” I
+                whispered, the words lost in the pelting rain.
+            </p>
+            <p>
+                Every raindrop that touched my skin felt like a cruel reminder of my
+                helplessness. I tried to reach out to her, but my body wouldn't respond. The pain
+                was numbing, both physical and emotional, and I felt as shattered as the glass
+                around us.
+            </p>
+            <p>
+                The scene was like a living nightmare, frozen in time. I could see the faint
+                outline of people rushing towards us, their voices a distant murmur. Panic and
+                fear were etched on their faces, yet it all felt so far away as if I was trapped in a
+                bubble of sorrow, disconnected from the world.
+            </p>
+            <p>
+                Her eyes, once so full of life and love, now held a vacant stare. I desperately
+                wanted to wipe away the tears and blood from her face, to hold her close. But I
+                couldn't move, couldn't even reach out to touch her.
+            </p>
+            <p>
+                As the rain intensified, it mingled with my own tears, blurring the world
+                around me even further. It felt as though the rain was weeping for her too,
+                mourning the life that had been shattered in an instant.
+            </p>
+            <p>
+                I wanted to scream, to release the overwhelming emotions within me, but my
+                voice remained trapped in my throat. All I could do was lie there, watching her,
+                feeling the rain and her pain soak into my skin.
+            </p>
+            <p>
+                Gods, I pray to you, each and every one of you. If you're there, please let us
+                restart again. I have never once asked you for any favour. But I'm asking now,
+                just this one time. Please. I'm begging you. “Please, let us restart again,” I
+                muttered.
+            </p>
+            <hr>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Book Details. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'light');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        // Set initial theme
+        document.body.setAttribute('data-theme', 'light');
+    </script>
+</body>
+</html>
