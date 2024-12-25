@@ -155,6 +155,32 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.chapter-end {
+    border: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.chapter-end:before {
+    content: '❀ ❀ ❀';
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.pov-changed {
+    border: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pov-changed:before {
+    content: '* * *';
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
 footer {
     text-align: center;
     padding: 20px;
