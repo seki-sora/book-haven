@@ -5,172 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #f3e7e9;
-            --text-color: #333;
-            --header-bg: rgba(255, 255, 255, 0.9);
-            --link-color: #555;
-            --link-hover: #0077cc;
-            --footer-bg: #f8f9fa;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #121212;
-            --text-color: #ffffff;
-            --header-bg: rgba(18, 18, 18, 0.9);
-            --link-color: #bbbbbb;
-            --link-hover: #4a90e2;
-            --footer-bg: #1e1e1e;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Merriweather', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            background-color: var(--header-bg);
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            display: inline;
-        }
-
-        nav {
-            float: right;
-        }
-
-        nav a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: var(--link-color);
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--link-hover);
-        }
-
-        .theme-switch {
-            cursor: pointer;
-            margin-left: 20px;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url('./book-background.jpg') no-repeat center center/cover;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeIn 2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .book-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .book {
-            display: inline-block;
-            margin: 20px;
-            text-align: left;
-            width: 250px;
-            height: 350px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            position: relative;
-        }
-
-        .book:hover {
-            transform: translateY(-10px);
-        }
-
-        .book img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 5px;
-        }
-
-        .book .info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-
-        .book:hover .info {
-            transform: translateY(0);
-        }
-
-        .book .info h3 {
-            margin: 10px 0 5px;
-            font-size: 1.2rem;
-        }
-
-        .book .info p {
-            font-size: 0.9rem;
-            color: #ddd;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--footer-bg);
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/home-style.css">
 </head>
 <body>
     <header>
@@ -178,8 +13,9 @@
         <nav>
             <a href="#hero">Home</a>
             <a href="#books">Books</a>
-            <a href="#contact">Contact</a>
-            <span class="theme-switch" onclick="toggleTheme()">Switch Theme</span>
+            <span class="toggle-container">
+                <div class="toggle" id="toggleButton"></div>
+            </span>
         </nav>
     </header>
 
@@ -190,47 +26,85 @@
 
     <section class="book-section" id="books">
         <h2>Featured Books</h2>
-        <a href="./book1.html">
         <div class="book">
-            <img src="./When Rain Meets Tears.png" alt="Book">
+            <a href="./book1.html">
+            <img src="./images/When Rain Meets Tears.png" alt="Book">
             <div class="info">
                 <h3>When Rain Meets Tears</h3>
                 <p>I am a young man fresh out of college, trying to find my footing in the real world as a programmer. After struggling to land a job, I finally secure a position at a not-so-famous company. On my first day...</p>
             </div>
+            </a>
         </div>
-        </a>
         <div class="book">
-            <img src="./Symphony of Memories.png" alt="Book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
             <div class="info">
-                <h3>Adventure Awaits</h3>
-                <p>Embark on a journey through thrilling tales and exciting characters.</p>
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
             </div>
         </div>
         <div class="book">
-            <img src="https://source.unsplash.com/250x350/?library" alt="Book">
+            <img src="./images/When Rain Meets Tears.png" alt="Book">
             <div class="info">
-                <h3>Library of Dreams</h3>
-                <p>Step into a world where every book is a portal to wonder.</p>
+                <h3>Faded Pages of Our Yesterday</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
+            <div class="info">
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
+            <div class="info">
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <a href="./book1.html">
+            <img src="./images/When Rain Meets Tears.png" alt="Book">
+            <div class="info">
+                <h3>When Rain Meets Tears</h3>
+                <p>I am a young man fresh out of college, trying to find my footing in the real world as a programmer. After struggling to land a job, I finally secure a position at a not-so-famous company. On my first day...</p>
+            </div>
+            </a>
+        </div>
+        <div class="book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
+            <div class="info">
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <img src="./images/When Rain Meets Tears.png" alt="Book">
+            <div class="info">
+                <h3>Faded Pages of Our Yesterday</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
+            <div class="info">
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <div class="book">
+            <img src="./images/Symphony of Memories.png" alt="Book">
+            <div class="info">
+                <h3>Symphony of Memories</h3>
+                <p>...</p>
             </div>
         </div>
     </section>
-
     <footer>
         <p>&copy; 2024 Book Haven. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function toggleTheme() {
-            const currentTheme = document.body.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                document.body.setAttribute('data-theme', 'light');
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-            }
-        }
-
-        // Set initial theme
-        document.body.setAttribute('data-theme', 'light');
-    </script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

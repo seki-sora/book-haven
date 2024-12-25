@@ -5,130 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #f3e7e9;
-            --text-color: #333;
-            --header-bg: #ffffff;
-            --link-color: #555;
-            --link-hover: #0077cc;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #121212;
-            --text-color: #ffffff;
-            --header-bg: #1e1e1e;
-            --link-color: #bbbbbb;
-            --link-hover: #4a90e2;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Merriweather', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            background-color: var(--header-bg);
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header img {
-            margin: 0;
-            width: 30px;
-            height: 30px;
-            display: inline;
-        }
-
-        nav {
-            float: right;
-        }
-
-        nav a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: var(--link-color);
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--link-hover);
-        }
-
-        .theme-switch {
-            cursor: pointer;
-            margin-left: 20px;
-        }
-
-        .book-details {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .book-header {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .book-header img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .book-header .info {
-            flex: 1;
-        }
-
-        .book-header .info h2 {
-            margin: 0 0 10px;
-            font-size: 2rem;
-        }
-
-        .book-header .info p {
-            margin: 5px 0;
-        }
-
-        .book-content {
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--header-bg);
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/book-style.css">
 </head>
 <body>
     <header>
-        <a href="./index.html"><img src="./home.png"></a>
+        <a href="./index.html" class="home-button"></a>
         <nav>
             <a href="#details">Details</a>
             <a href="#content">Content</a>
-            <span class="theme-switch" onclick="toggleTheme()">Switch Theme</span>
+            <span class="toggle-container">
+                <div class="toggle" id="toggleButton"></div>
+            </span>
         </nav>
     </header>
 
     <section class="book-details">
-        <div class="book-header">
-            <img src="./When Rain Meets Tears.png" alt="Book Cover">
+        <div id="details" class="book-header">
+            <img src="./images/When Rain Meets Tears.png" alt="Book Cover">
             <div class="info">
                 <h2>When Rain Meets Tears</h2>
                 <br>
@@ -197,21 +90,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Book Details. All Rights Reserved.</p>
+        <p>&copy; 2024 When Rain Meets Tears. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function toggleTheme() {
-            const currentTheme = document.body.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                document.body.setAttribute('data-theme', 'light');
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-            }
-        }
-
-        // Set initial theme
-        document.body.setAttribute('data-theme', 'light');
-    </script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
